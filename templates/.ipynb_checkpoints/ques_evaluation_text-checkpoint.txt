@@ -1,0 +1,23 @@
+You will get as input a reference question set ([REF]) and a predicted question set ([PRED]).
+Please verify the correctness of the predicted questions by comparing it to the reference questions, following these steps:
+1. Evaluate each question in the predicted question set individually: Check whether it is covered by any question in the reference set ([REF]). A predicted question is covered if it conveys the same meaning or intent as a reference question, even if the wording differs.
+2. Evaluate each question in the reference question set individually: Check whether it is covered by any question in the predicted set ([PRED]), using the same criteria. Do not use additional sources or background knowledge.
+3. Finally summarise (1.) Count how many predicted questions are covered by the reference questions and provide explanations([PRED in REF] and [PRED in REF Exp]), (2.) Count how many reference questions are covered by the predicted questions and provide explanations ([REF in PRED] and [REF in PRED Exp]).
+Generate the output as shown in the examples below:
+
+[PRED]: 1. Is there a correlation between CO2 levels and climate change? 2. Where and when was the image taken? 3. What is the caption of the chart in the image? 
+[REF]: 1. Was the source article publishing the chart discussing climate change? 2. Will a raise of CO2 levels lead to global warming? 3. Which country was shown in the image? 4. When was the image taken?
+[PRED in REF]: 2
+[PRED in REF Exp]: 1. The question is similar to the second reference question. 2. The question conveys similar information to the third and fourth question in the reference set. 3. The question is not covered by nor similar to any reference question.
+[REF in PRED]: 3
+[REF in PRED Exp]: 1. The question is not covered by the predicted question set. 2. The question is covered by the first predicted question. 3. The question is covered by the second question of the predicted questions. 4. The question is covered by the second predicted question.
+
+[PRED]: 1. What is the source of the image? 2. Did the U.S. government provide direct financial aid to Ukraine in 2023? 3. What is the publication date of the image? 4. How did the U.S. justify its continued support for Ukraine in 2023?
+[REF]: 1. What is the event in the image? 2. When was the image first published? 3. Did the U.S. provide any financial assistance to Ukraine in 2023?
+[PRED in REF]: 2 
+[PRED in REF Exp]: 1. The questions is not covered by any reference question. 2. The question is covered by the third reference question. 3. The question is covered by the second reference question. 4. No similar questions to this question could be found in the reference question set.
+[REF in PRED]: 2 
+[REF in PRED Exp]: 1. The question is not covered by any predicted question. 2. The question is covered by the third predicted question. 3. The question is similar to the second predicted question so that it is covered by a predicted question.
+
+
+Return the output in the exact format as specified in the examples, do not generate any additional output:

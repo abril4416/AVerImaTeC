@@ -1,0 +1,7 @@
+verify_gen_prompt="You need to select a verdict for a given Image-Text claim when provided a set of evidence. [IMG] is a placeholder for images. We provide four verdict labels and the definitions of them below:"
+verify_gen_prompt+="Supported: The claim is supported by the evidence presented.\n"
+verify_gen_prompt+="Refuted: The claim (either the text or the image part) is contradicted by the evidence presented.\n"
+verify_gen_prompt+="Not Enough Evidence: There is not enough evidence (NEE) to support or refute the claim.\n"
+verify_gen_prompt+="Conflicting: The claim is misleading due to conflicting evidence/cherry-picking, but not explicitly refuted.\n"
+verify_gen_prompt+="You need to response with the verdict for the claim (i.e., Supported, Refuted, Not Enough Evidence or Conflicting) and please do not respond with any other words.\n\n"
+verify_gen_prompt+="\n\nThe metadata of the claim: %s Claim: %s Claim images:"

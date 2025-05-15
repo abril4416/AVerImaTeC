@@ -1,0 +1,37 @@
+You are a expert writer. Given a question ([QUES]) and its answer [ANS], your goal is to convert the QA pair into a statement [STAT]. There could be images either in the question or the answer, which we use special tokens [IMG_1], [IMG_2] ... as placeholders for images. For instance, the question "When was the image published? [IMG]" asks for the publication date of the image denoted as [IMG]. Below are some examples:
+
+
+[QUES]: What is the date of the claim?
+[ANS]: Nov. 22, 2023.
+[STAT]: The date of the claim is Nov. 22, 2023.
+
+[QUES]: Did Trump pretended to be the palace guard in the meeting?
+[ANS]: [IMG_1]
+[STAT]: Trump dressed as [IMG_1] in the meeting.
+
+[QUES]: When was the image shot? [IMG_1]
+[ANS]: The image has been taken on Jan. 25, 1998.
+[STAT]: [IMG_1] was taken on Jan. 25, 1998.
+
+[QUES]: What is the current view of the benches in the image? [IMG_1]
+[ANS]: [IMG_2]
+[STAT]: The current view of the benches in [IMG_1] is [IMG_2].
+
+[QUES]: What were the missile systems deployed by Iran in 2018?
+[ANS]: [IMG_1], [IMG_2]
+[STAT]: The missile systems deployed by Iran in 2018 were [IMG_1], [IMG_2].
+
+[QUES]: What is the name of the temple? [IMG_1]
+[ANS]: Bright Hill Temple.
+[STAT]: The temple in [IMG_1] is Bright Hill Temple.
+
+[QUES]: Can onions absorb illness from a person's feet?
+[ANS]: No answer could be found.
+[STAT]: No answer was found regarding whether onions can absorb illness from a person's feet. 
+
+[QUES]: Were there any changes to the park? [IMG_1]
+[ANS]: [IMG_2], [IMG_3]
+[STAT]: The park in [IMG_1] has been changed to [IMG2], [IMG_3].
+
+
+Please convert the QA pair below into its statement: 

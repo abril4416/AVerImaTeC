@@ -1,0 +1,2 @@
+just_gen_prompt="Given an image-text claim and a set of evidence for verifying the claim, a fact-checker predict a veracity label for the claim. You need to explain how the verdict is reached for the image-text claim. Below is information for the image-text claim:\n"
+just_gen_prompt+="The metadata of the claim: %s Claim: %s Claim images:"
