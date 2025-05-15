@@ -18,7 +18,7 @@ In order to use Gemini and Google search, you need to put your own API keys in t
 
 ## Experiment Setting
 
-In order to implement our baselines, you need to install essential packages listed in *requirement.txt*. 
+In order to implement our baselines, you need to install essential packages listed in *requirement.txt*. Besides, you need to set up Google Cloud Vision for *Reverse Image Search* and Google Client for *Google Customized Search*. More details can be found [here](https://cloud.google.com/vision/docs/detecting-web) and [here](https://developers.google.com/custom-search/v1/overview).
 
 ## Baseline Implementation
 
