@@ -22,6 +22,23 @@ In order to implement our baselines, you need to install essential packages list
 
 ## Baseline Implementation
 
+For instance, for one combination of an LLM and an MLLM, you are able to get six results, three for the few-shot setting and three for the zero-shot setting. For each setting, you can obtain results with three question generation strategies. We list the six commands below to replicate results shown in Table 3 and 12 of our paper. We use Qwen for an illustration:
+```
+python mm_checker.py --LLM_NAME 'qwen' --MLLM_NAME 'qwen' --SAVE_NUM 11
+python mm_checker.py --LLM_NAME 'qwen' --MLLM_NAME 'qwen' --SAVE_NUM 12 --QG_ICL True
+python mm_checker.py --LLM_NAME 'qwen' --MLLM_NAME 'qwen' --SAVE_NUM 13 --PARA_QG True
+python mm_checker.py --LLM_NAME 'qwen' --MLLM_NAME 'qwen' --SAVE_NUM 14 --PARA_QG True --QG_ICL True 
+python mm_checker.py --LLM_NAME 'qwen' --MLLM_NAME 'qwen' --SAVE_NUM 15 --HYBRID_QG True --NUM_GEN_QUES 2  
+python mm_checker.py --LLM_NAME 'qwen' --MLLM_NAME 'qwen' --SAVE_NUM 16 --HYBRID_QG True --NUM_GEN_QUES 2 --QG_ICL True 
+```
+You can also set *--DEBUG True* to switch to the debug mode (only test a few claims) for easy debugging.
+We provide the implementation for the following LLMs and MLLMs: LLM_NAME can be set to *gemini-2.0-flash-001*, *qwen* and *gemma* while MLLM_NAM can be set to *gemini-2.0-flash-001*, *qwen*, *gemma* and *llava*.
+
+As MLLMs tend to generate long outputs, we implement a post-doc summarization step, with the script:
+```
+python summarize_justification.py --LLM_NAME [LLM_IN_BASELINE] --MLLM_NAME [MLLM_IN_BASELINE] --SAVE_NUM [SAVE_NUM_FOR_PREDICTION]
+```
+
 ## Baseline Evaluation
 The evaluation consists of two parts: for the generated questions and evidence. Question evaluation follows the [Ev2R paper](https://arxiv.org/abs/2411.05375). We extend it to the multimodal setting for the evaluation of interleaved image-text evidence. After generating predictions following [the section above](#baseline-implmenetation), you can execute the script below under the *evaluation* folder, for evidence evaluation:
 ```
