@@ -227,8 +227,8 @@ def compute_image_scores(model,pred_evid,ref_evid,score):
     for detail in ref_in_pred:
         info=detail[1:-1].split(',')
         try:
-           pred_idx=int(info[0].split('_')[-1])
-           ref_idx=int(info[1].split('_')[-1])
+           pred_idx=int(info[1].split('_')[-1])
+           ref_idx=int(info[0].split('_')[-1])
            imgs_pred=pred_evid[pred_idx-1]['images']
            imgs_ref=ref_evid[ref_idx-1]['images']
            if len(imgs_pred)==0 or len(imgs_ref)==0:
