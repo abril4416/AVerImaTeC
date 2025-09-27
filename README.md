@@ -1,3 +1,9 @@
+# 🎊 News <!-- omit in toc -->
+
+- [2024.09] 🔥 AVerImaTeC shared task has been held [here](https://huggingface.co/spaces/FEVER-IT/AVerImaTeC). The baseline implementation with static knowledge store is provided in this [repository](https://github.com/abril4416/AVerImaTec_Shared_Task).
+- [2025.09] 🎉 We are pleased to announce that FEVER9 will be co-located with EACL2026! In this year's workshop, we will focus on image-text claim verification and leverage AVerImaTeC as the shared task. You can learn more about FEVER9 and past FEVER workshops [here](https://fever.ai/index.html).
+- [2025.09] 🎉 Our AVerImaTeC paper is accepted by NeurIPS Datasets and Benchmarks track! You can access the lastest version of the paper at [here](https://arxiv.org/pdf/2505.17978).
+
 # Baseline Implementation for AVerImaTeC
 
 This repository maintains the baseline described in our paper: AVERIMATEC: A Dataset for Automatic Verification of Image-Text Claims with Evidence from the Web
@@ -11,7 +17,7 @@ This repository maintains the baseline described in our paper: AVERIMATEC: A Dat
 ## Dataset Preparation
 
 ### AVerImaTeC Data
-Please download the data from our provided link. Put the *images.zip* under the *data/data_clean* folder and unzip it. For json files, please put it under the *data/data_clean/split_data*. 
+Please download the data from our provided [link](https://huggingface.co/datasets/Rui4416/AVerImaTeC). Put the *images.zip* under the *data/data_clean* folder and unzip it. For json files, please put it under the *data/data_clean/split_data*. 
 
 ### API Keys
 In order to use Gemini and Google search, you need to put your own API keys in the folder *private_info*.
@@ -44,6 +50,6 @@ The evaluation consists of two parts: for the generated questions and evidence. 
 ```
 python evid_eval.py --llm_name [LLM_IN_BASELINE] --mllm_name [MLLM_IN_BASELINE] --save_num [SAVE_NUM_FOR_PREDICTION] --seperate_val True 
 ```
-We also provide options for text-only and interleaved image-text evaluation (see SEction 6 of our paper), which have worse performance compared to the separated evaluation. You can try these evaluation methods by setting *--text-only True* or *--text-only False* + *--seperate_val False*
+We also provide options for text-only and interleaved image-text evaluation (see Section 6 of our paper), which have worse performance compared to the separated evaluation. You can try these evaluation methods by setting *--text-only True* or *--text-only False* + *--seperate_val False*
 
 We also provided post-doc calculations for the evidence evaluation score, verdict prediction accuracy and justification generation: see *evaluation/ipython/Val_Evid_Latest.ipynb*.
