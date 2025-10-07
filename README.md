@@ -1,6 +1,6 @@
 # 🎊 News <!-- omit in toc -->
 
-- [2024.09] 🔥 AVerImaTeC shared task has been held [here](https://huggingface.co/spaces/FEVER-IT/AVerImaTeC). The baseline implementation with static knowledge store is provided in this [repository](https://github.com/abril4416/AVerImaTec_Shared_Task).
+- [2025.09] 🔥 AVerImaTeC shared task has been held [here](https://huggingface.co/spaces/FEVER-IT/AVerImaTeC). The baseline implementation with static knowledge store is provided in this [repository](https://github.com/abril4416/AVerImaTec_Shared_Task).
 - [2025.09] 🎉 We are pleased to announce that FEVER9 will be co-located with EACL2026! In this year's workshop, we will focus on image-text claim verification and leverage AVerImaTeC as the shared task. You can learn more about FEVER9 and past FEVER workshops [here](https://fever.ai/index.html).
 - [2025.09] 🎉 Our AVerImaTeC paper is accepted by NeurIPS Datasets and Benchmarks track! You can access the lastest version of the paper at [here](https://arxiv.org/pdf/2505.17978).
 
